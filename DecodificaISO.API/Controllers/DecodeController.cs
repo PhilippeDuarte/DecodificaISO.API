@@ -21,11 +21,14 @@ namespace DecodificaISO.API.Controllers
 		/// <summary>
 		/// Decodifica o arquivo financial_transaction_message.dat baseando-se no arquvo financial_transaction_message.txt
 		/// </summary>
+		/// <remarks>
+		/// Decodifica o arquivo financial_transaction_message.dat
+		/// </remarks>
 		/// <returns>
 		///	200 - com o Json dos parâmetros decodificados 
 		/// 400 - Arquivo vazio
 		/// </returns>
-		[HttpGet("DecodeSimpleMessage")]
+		[HttpGet("Decode financial_transaction_message")]
 		public ActionResult<Message> DecodeSimpleMessage()
 		{
 			string fileReaded = _reader.ReadFile("financial_transaction_message.dat");
@@ -40,11 +43,14 @@ namespace DecodificaISO.API.Controllers
 		/// <summary>
 		/// Decodifica o arquivo message_with_hex_bcd.dat baseando-se no arquvo message_with_hex_bcd.txt
 		/// </summary>
+		/// <remarks>
+		/// Decodifica o arquivo message_with_hex_bcd.dat
+		/// </remarks>
 		/// <returns>
 		///	200 - com o Json dos parâmetros decodificados 
 		/// 400 - Arquivo vazio
 		/// </returns>
-		[HttpGet("DecodeBCDMessage")]
+		[HttpGet("Decode message_with_hex_bcd")]
 		public ActionResult<Message> DecodeBCDMessage()
 		{			
 			string fileReaded = _reader.ReadFile("message_with_hex_bcd.dat");
